@@ -58,7 +58,7 @@ Built as part of the **FullStack Intern Coding Challenge**.
 - View **average rating** and **comments**.  
 
 **Screenshot:**  
-![Store Owner Dashboard](./screenshots/store-owner-dashboard.png)
+![Store Owner Dashboard](./screenshot/store-owner-dashboard.png)
 
 ---
 
