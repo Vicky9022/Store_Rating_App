@@ -1,118 +1,207 @@
-🏪 Store Ratings App
+Perfect 👍 I’ve reviewed your **challenge PDF** and your project setup. I’ll craft a professional `README.md` that’s detailed, clean, and GitHub-ready.
 
-A full-stack web application where Admins, Store Owners, and Users interact in a store rating system.
-Admins manage users and stores, store owners manage their stores & ratings, and users explore and rate stores.
+Here’s the recommended file:
 
-🚀 Features
-👩‍💻 Admin Dashboard
+---
 
-View total users, stores, and ratings (auto-updating).
+```markdown
+# 🏬 Store Ratings App
 
-Add, edit, or delete users and stores.
+A full-stack web application where users can **rate stores**, and administrators can **manage users, stores, and ratings**. Built as part of the **FullStack Intern Coding Challenge**.
 
-Monitor store performance with live stats.
+---
 
-🏬 Store Owner Dashboard
+## 🚀 Features
 
-Manage one store per owner.
+### 🔑 Authentication & Roles
+- Single login system with **role-based access control**:
+  - **System Administrator**  
+    - Manage users and stores.  
+    - View dashboards with platform statistics.  
+  - **Normal User**  
+    - Register, log in, and rate stores.  
+    - Search stores and manage their own ratings.  
+  - **Store Owner**  
+    - Manage their store information.  
+    - View ratings submitted by users for their store.
 
-View & update store details.
+---
 
-Analyze ratings & customer reviews with statistics.
+### 📊 Admin Dashboard
+- Displays **total users, total stores, total ratings, average rating**.  
+- Manage:
+  - Users (create/update/delete).  
+  - Stores (assign to store owners).  
+- Apply filters and sorting on all listings.  
 
-🙍 User Dashboard
+---
 
-Explore available stores.
+### 👤 Normal User
+- Register and log in.  
+- View/search stores by **name** and **address**.  
+- Submit ratings (⭐ 1–5) and comments.  
+- Edit/update their submitted ratings.  
+- See personal rating history.  
 
-Add ratings & reviews.
+---
 
-View personal rating history.
+### 🏪 Store Owner
+- Log in to access store dashboard.  
+- Manage their **store profile** (name, address).  
+- See **all ratings** submitted for their store.  
+- View **average rating** and **comments**.  
 
-🛠 Tech Stack
+---
 
-Frontend: React, TailwindCSS, React Query, Lucide Icons
+### ✅ Validations
+- **Name:** 20–60 characters.  
+- **Address:** Max 400 characters.  
+- **Password:** 8–16 characters, at least one uppercase and one special character.  
+- **Email:** Standard email format.  
 
-Backend: Node.js, Express.js
+---
 
-Database: MongoDB / MySQL (based on your setup)
+## 🛠 Tech Stack
 
-Authentication: JWT (JSON Web Token)
+### Backend
+- **Node.js + Express.js**
+- **MySQL / PostgreSQL** (SQL DB)
+- Authentication via **JWT**
 
-Other Tools: Axios, React Hot Toast, React Router
+### Frontend
+- **React.js (Vite / CRA)**
+- **React Query** for data fetching
+- **TailwindCSS + Lucide Icons** for UI
+- **React Hot Toast** for notifications
 
-⚙️ Installation
-1️⃣ Clone repository
-git clone https://github.com/your-username/store-ratings-app.git
+---
+
+## 📂 Project Structure
+
+```
+
+/frontend        → React frontend (user, admin, store dashboards)
+/backend         → Express API with routes, controllers, models
+
+````
+
+---
+
+## ⚙️ Setup & Installation
+
+### Prerequisites
+- Node.js (>= 18)
+- npm / yarn
+- MySQL or PostgreSQL database
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/YOUR-USERNAME/store-ratings-app.git
 cd store-ratings-app
+````
 
-2️⃣ Install dependencies
+### 2. Backend Setup
 
-Frontend:
-
-cd client
+```bash
+cd backend
+cp .env.example .env   # configure DB, JWT_SECRET, etc.
 npm install
+npm run migrate        # create tables if migration script available
+npm run dev            # start backend server (default: http://localhost:5000)
+```
 
+### 3. Frontend Setup
 
-Backend:
-
-cd server
+```bash
+cd ../frontend
+cp .env.example .env   # set API base URL (http://localhost:5000/api)
 npm install
+npm run dev            # start frontend (default: http://localhost:3000)
+```
 
-3️⃣ Setup environment variables
+---
 
-Create .env in server/:
+## 🔑 Environment Variables
 
+Backend `.env`:
+
+```
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=yourpassword
+DB_NAME=store_ratings
+JWT_SECRET=supersecretkey
 PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
+```
 
-4️⃣ Run the project
+Frontend `.env`:
 
-Backend:
+```
+VITE_API_URL=http://localhost:5000/api
+```
 
-cd server
-npm run dev
+---
 
+## 📸 Screenshots
 
-Frontend:
+### Admin Dashboard
 
-cd client
-npm start
+* Manage users and stores.
+* View total users, total stores, total ratings, average rating.
 
-📸 Screenshots
-🔑 Authentication
+### Store Owner Dashboard
 
+* View own store details.
+* See ratings/comments from users.
 
-Login page for users, store owners, and admins.
+### User Dashboard
 
+* Search and rate stores.
+* View rating history.
 
-Register as User or Store Owner.
+---
 
-👩‍💻 Admin Dashboard
+## 🧪 Testing
 
+Run backend tests:
 
-Admins can manage users, stores, and monitor live stats.
+```bash
+cd backend
+npm test
+```
 
-🏬 Store Owner Dashboard
+Run frontend tests:
 
+```bash
+cd frontend
+npm test
+```
 
-Store Owners manage their store, edit info, and view reviews.
+---
 
-🙍 User Dashboard
+## 📌 To-Do / Improvements
 
+* [ ] Add pagination to tables (users, stores, ratings).
+* [ ] Implement password reset via email.
+* [ ] Improve admin analytics (charts, trends).
 
-Users can explore stores and leave ratings.
+---
 
-🔮 Future Improvements
-
-Add role-based analytics dashboards.
-
-Support multiple stores per owner.
-
-Export data to CSV & PDF.
-
-Add store images and location map.
-
-📜 License
+## 📄 License
 
 This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+* Developed as part of **FullStack Intern Coding Challenge**.
+Author: **Vikas Rathod**  
+* GitHub: [Vicky9022](https://github.com/Vicky9022)  
+* LinkedIn: [Vikas Rathod](www.linkedin.com/in/vikasrathod90) 
+
+```
+
+---
+
+
