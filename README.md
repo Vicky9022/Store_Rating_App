@@ -29,7 +29,7 @@ Built as part of the **FullStack Intern Coding Challenge**.
 - Apply filters and sorting on all listings.  
 
 **Screenshot:**  
-![Admin Dashboard](./screenshots/Screenshot%202025-09-15%20014206.png)
+![Admin Dashboard](./screenshots/admin-dashboard.png)
 
 ---
 
@@ -41,13 +41,13 @@ Built as part of the **FullStack Intern Coding Challenge**.
 - See personal rating history.  
 
 **Login Page**  
-![Login](./screenshots/Screenshot%202025-09-15%20014038.png)  
+![Login](./screenshots/login.png)  
 
 **Signup Page**  
-![Signup](./screenshots/Screenshot%202025-09-15%20014018.png)  
+![Signup](./screenshots/signup.png)  
 
 **User Dashboard (Explore Stores & Ratings)**  
-![User Dashboard](./screenshots/Screenshot%202025-09-14%20212339.png)
+![User Dashboard](./screenshots/user-dashboard.png)
 
 ---
 
@@ -58,7 +58,7 @@ Built as part of the **FullStack Intern Coding Challenge**.
 - View **average rating** and **comments**.  
 
 **Screenshot:**  
-![Store Owner Dashboard](./screenshots/Screenshot%202025-09-14%20212249.png)
+![Store Owner Dashboard](./screenshots/store-owner-dashboard.png)
 
 ---
 
