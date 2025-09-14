@@ -1,13 +1,7 @@
-Perfect 👍 I’ve reviewed your **challenge PDF** and your project setup. I’ll craft a professional `README.md` that’s detailed, clean, and GitHub-ready.
-
-Here’s the recommended file:
-
----
-
-```markdown
 # 🏬 Store Ratings App
 
-A full-stack web application where users can **rate stores**, and administrators can **manage users, stores, and ratings**. Built as part of the **FullStack Intern Coding Challenge**.
+A full-stack web application where users can **rate stores**, and administrators can **manage users, stores, and ratings**.  
+Built as part of the **FullStack Intern Coding Challenge**.
 
 ---
 
@@ -34,6 +28,9 @@ A full-stack web application where users can **rate stores**, and administrators
   - Stores (assign to store owners).  
 - Apply filters and sorting on all listings.  
 
+**Screenshot:**  
+![Admin Dashboard](./screenshots/Screenshot%202025-09-15%20014206.png)
+
 ---
 
 ### 👤 Normal User
@@ -43,6 +40,15 @@ A full-stack web application where users can **rate stores**, and administrators
 - Edit/update their submitted ratings.  
 - See personal rating history.  
 
+**Login Page**  
+![Login](./screenshots/Screenshot%202025-09-15%20014038.png)  
+
+**Signup Page**  
+![Signup](./screenshots/Screenshot%202025-09-15%20014018.png)  
+
+**User Dashboard (Explore Stores & Ratings)**  
+![User Dashboard](./screenshots/Screenshot%202025-09-14%20212339.png)
+
 ---
 
 ### 🏪 Store Owner
@@ -50,6 +56,9 @@ A full-stack web application where users can **rate stores**, and administrators
 - Manage their **store profile** (name, address).  
 - See **all ratings** submitted for their store.  
 - View **average rating** and **comments**.  
+
+**Screenshot:**  
+![Store Owner Dashboard](./screenshots/Screenshot%202025-09-14%20212249.png)
 
 ---
 
@@ -78,90 +87,112 @@ A full-stack web application where users can **rate stores**, and administrators
 
 ## 📂 Project Structure
 
-```
-
-/frontend        → React frontend (user, admin, store dashboards)
-/backend         → Express API with routes, controllers, models
-
-````
-
----
-
-## ⚙️ Setup & Installation
-
-### Prerequisites
-- Node.js (>= 18)
-- npm / yarn
-- MySQL or PostgreSQL database
-
-### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR-USERNAME/store-ratings-app.git
-cd store-ratings-app
-````
+store-rating-App/ 
+├── backend/
+│   ├── config/
+│   │   └── database.js
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── users.js
+│   │   ├── stores.js
+│   │   ├── ratings.js
+│   │   └── admin.js
+│   ├── scripts/
+│   │   ├── init-database.sql
+│   │   └── seed-data.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── frontend/ 
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.ico
+│   │   └── manifest.json
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Header.jsx
+│   │   │   │   ├── LoadingSpinner.jsx
+│   │   │   │   ├── ErrorMessage.jsx
+│   │   │   │   └── PrivateRoute.jsx
+│   │   │   ├── auth/
+│   │   │   │   ├── LoginForm.jsx
+│   │   │   │   ├── SignupForm.jsx
+│   │   │   │   └── PasswordModal.jsx
+│   │   │   ├── admin/
+│   │   │   │   ├── AdminDashboard.jsx
+│   │   │   │   ├── StatsCards.jsx
+│   │   │   │   ├── UsersTable.jsx
+│   │   │   │   ├── StoresTable.jsx
+│   │   │   │   └── AddModal.jsx
+│   │   │   ├── user/
+│   │   │   │   ├── UserDashboard.jsx
+│   │   │   │   ├── StoreCard.jsx
+│   │   │   │   ├── StoreList.jsx
+│   │   │   │   └── RatingStars.jsx
+│   │   │   └── store-owner/
+│   │   │       ├── StoreOwnerDashboard.jsx
+│   │   │       ├── RatingsTable.jsx
+│   │   │       └── StoreStats.jsx
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── authService.js
+│   │   │   ├── userService.js
+│   │   │   ├── storeService.js
+│   │   │   └── ratingService.js
+│   │   ├── utils/
+│   │   │   ├── constants.js
+│   │   │   ├── validators.js
+│   │   │   └── helpers.js
+│   │   ├── hooks/
+│   │   │   ├── useAuth.js
+│   │   │   ├── useApi.js
+│   │   │   └── useForm.js
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   ├── styles/
+│   │   │   └── index.css
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── index.js
+     ── .env
+│   ├── .gitignore
+│   ├── package.json
+└── README.md
 
-### 2. Backend Setup
 
-```bash
+
+
+
+📸 Screenshots Overview
+Admin Dashboard – Manage users, stores, and see stats.
+
+Login Page – User authentication.
+
+Signup Page – Create a new account with validations.
+
+User Dashboard – Explore and rate stores.
+
+Store Owner Dashboard – Manage store and view ratings.
+
+⚡ Getting Started
+Backend
+bash
+Copy code
 cd backend
-cp .env.example .env   # configure DB, JWT_SECRET, etc.
 npm install
-npm run migrate        # create tables if migration script available
-npm run dev            # start backend server (default: http://localhost:5000)
-```
-
-### 3. Frontend Setup
-
-```bash
-cd ../frontend
-cp .env.example .env   # set API base URL (http://localhost:5000/api)
+npm run dev
+Frontend
+bash
+Copy code
+cd frontend
 npm install
-npm run dev            # start frontend (default: http://localhost:3000)
-```
+npm run dev
 
----
-
-## 🔑 Environment Variables
-
-Backend `.env`:
-
-```
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=yourpassword
-DB_NAME=store_ratings
-JWT_SECRET=supersecretkey
-PORT=5000
-```
-
-Frontend `.env`:
-
-```
-VITE_API_URL=http://localhost:5000/api
-```
-
----
-
-## 📸 Screenshots
-
-### Admin Dashboard
-
-* Manage users and stores.
-* View total users, total stores, total ratings, average rating.
-
-### Store Owner Dashboard
-
-* View own store details.
-* See ratings/comments from users.
-
-### User Dashboard
-
-* Search and rate stores.
-* View rating history.
-
----
-
-## 🧪 Testing
 
 Run backend tests:
 
@@ -191,6 +222,10 @@ npm test
 
 This project is licensed under the MIT License.
 
+This project is built for the FullStack Intern Coding Challenge.
+
+Free to use for educational purposes.## 🧪 Testing
+
 ---
 
 ## 👨‍💻 Author
@@ -200,8 +235,6 @@ Author: **Vikas Rathod**
 * GitHub: [Vicky9022](https://github.com/Vicky9022)  
 * LinkedIn: [Vikas Rathod](www.linkedin.com/in/vikasrathod90) 
 
-```
 
----
 
 
