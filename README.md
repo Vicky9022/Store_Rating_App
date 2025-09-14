@@ -29,7 +29,7 @@ Built as part of the **FullStack Intern Coding Challenge**.
 - Apply filters and sorting on all listings.  
 
 **Screenshot:**  
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+![Admin Dashboard](./screenshot/admin-dashboard.png)
 
 ---
 
@@ -41,13 +41,13 @@ Built as part of the **FullStack Intern Coding Challenge**.
 - See personal rating history.  
 
 **Login Page**  
-![Login](./screenshots/login.png)  
+![Login](./screenshot/login.png)  
 
 **Signup Page**  
-![Signup](./screenshots/signup.png)  
+![Signup](./screenshot/signup.png)  
 
 **User Dashboard (Explore Stores & Ratings)**  
-![User Dashboard](./screenshots/user-dashboard.png)
+![User Dashboard](./screenshot/user-dashboard.png)
 
 ---
 
